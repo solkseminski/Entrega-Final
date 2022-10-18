@@ -1,0 +1,20 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>Acá podemos agregar el avatar.</h1>
+
+
+<form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="Submit"> Enviar</button>
+
+{% endblock %}
+
+
+</form>

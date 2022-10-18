@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   {% for miembro in people %} 
+
+   <p>Nombre: {{miembro.nombre}}</p>
+   <p>Apellido: {{miembro.apellido}}</p>
+   <p>Email: {{miembro.email}}</p>
+   <p>Edad: {{miembro.edad}}</p>
+
+
+    <button>
+    <a href="{% url 'MiembroEditar' miembro.nombre %}"> Editar Miembro</a>
+    <button>
+  
+    <a href="{% url 'MiembroEliminar' miembro.nombre %}"> Eliminar Miembro</a>
+   </button>
+
+    
+
+   {% endfor %}
+
+
+   <br>
+   <br>
+   <a href="{% url 'MiembrosCrear' %}"> Crear Miembro</a>
+  
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>Acá podemos Registrarnos.</h1>
+
+<br>
+<br>
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="Submit">Registrarse</button>
+
+{% endblock %}
+
+
+</form>

@@ -1,0 +1,23 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>Acá se edita el usuario.</h1>
+
+
+<br>
+<br>
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="Submit"> Editar</button>
+
+{% endblock %}
+
+
+</form>
+

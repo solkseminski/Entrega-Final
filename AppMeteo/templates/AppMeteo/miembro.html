@@ -1,0 +1,22 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>Me encanta que seas parte de esta comundidad virtual!.</h1>
+
+<br>
+
+<form action="/AppMeteo/resultadosmiembro/" method="GET"> {% csrf_token %}
+
+    <input type="text" name="miembro" id="miembro">
+    <input type="submit" value="Buscar Miembro">
+
+
+    </form>
+
+    <p style="color:white;">Estas buscando el miembro: {{nombre}}</p>
+
+{% endblock %}

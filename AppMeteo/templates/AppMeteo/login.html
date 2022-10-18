@@ -1,0 +1,20 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>Acá podemos iniciar sesión.</h1>
+
+
+<form action="" method="POST"> {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="Submit" value="Iniciar Sesión"> Iniciar Sesión</button>
+
+{% endblock %}
+
+
+</form>

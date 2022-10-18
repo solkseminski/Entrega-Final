@@ -1,0 +1,40 @@
+{% extends "AppMeteo/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+<h1>¿Qué es un fenómeno meteorológico?</h1>
+
+<br>
+<br>
+
+<p style="color:white;">Un fenómeno meteorológico es un evento que la naturaleza provoca, el cual puede ser maravillosamente perfecto pero a la vez totalmente destructivo</p>
+
+
+<form action="/AppMeteo/resultados/" method="GET">
+
+    <input type="text" name="fenomeno" id="fenomeno">
+    <input type="submit" value="Buscar fenomeno">
+
+
+    </form>
+
+    <p style="color:white;">Estas buscando el fenómeno: {{nombre}}</p>
+
+    
+{% endblock %}
+
+{% block descripcion %}
+<div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+    <div class="col-lg-6"><img class="img-fluid" src="{% static 'AppMeteo/assets/img/demo-image-01.jpg' %}" alt="..." /></div>
+    <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+<h4>Tipos de fenómenos meteorológicos</h4>
+ <p class="mb-0 text-white-50">Dentro de los fenómenos que conocemos se encuentran las tormentas de todo tipo, las lluvias, las nevadas, los vientos intensos y todos aquellos fenonemos ópticos que podemos observar.</p>
+    
+ 
+{% endblock %} 
